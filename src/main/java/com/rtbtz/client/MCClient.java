@@ -18,11 +18,11 @@ import java.util.logging.Logger;
 class Disconnector {
     private boolean disconnected = false;
 
-    public boolean isDisconnected() {
+    synchronized public boolean isDisconnected() {
         return disconnected;
     }
 
-    public void setDisconnected(boolean disconnected) {
+    synchronized public void setDisconnected(boolean disconnected) {
         this.disconnected = disconnected;
     }
 }
